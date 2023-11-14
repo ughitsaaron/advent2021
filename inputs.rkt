@@ -1,9 +1,12 @@
 #lang racket
 
+(require srfi/1 srfi/26)
+
 (provide day-1)
 (provide day-2)
 (provide day-3)
 (define day-1 (map string->number (file->lines "input/day_1_input.txt")))
+
 (define day-2
   (map (lambda (row)
          (match row
