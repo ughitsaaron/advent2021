@@ -1,0 +1,26 @@
+{
+  "name": "advent2021",
+  "version": "1.0.0",
+  "repository": "git@github.com:ughitsaaron/advent2021",
+  "author": "ughitsaaron <aaron@adobe.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/lodash": "^4.14.201",
+    "@types/node": "^20.9.0",
+    "eslint-config-prettier": "^9.0.0",
+    "lodash": "^4.17.21"
+  },
+  "scripts": {
+    "eval": "ts-node --esm -i -p"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "*"
+  }
+}
