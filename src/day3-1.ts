@@ -1,17 +1,18 @@
-import { zip as transpose } from "lodash";
+import { zip as transpose, ary } from "lodash";
 import { run, getInput, mostCommon, leastCommon, toDecimal, joinNumeric } from "../lib";
 
 function parseInput(data: string[]) {
   return data.map((n) => n.split("").map(Number));
 }
 
+const most = (input) => toDecimal(joinNumeric(input.map(ary(mostCommon, 1))));
+const least = (input) => toDecimal(joinNumeric(input.map(ary(leastCommon, 1))));
+
 async function main() {
   const data = await getInput("../input/day_3_input.txt")
     .then(parseInput)
     .then((input) => transpose(...input));
-  const gamma = joinNumeric(data.map(mostCommon));
-  const epsilon = joinNumeric(data.map(leastCommon));
-  return toDecimal(gamma) * toDecimal(epsilon);
+  return most(data) * least(data);
 }
 
 run(main);
